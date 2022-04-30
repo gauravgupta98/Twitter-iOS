@@ -10,6 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     @State private var selectionFilter: TweetFilterViewModel = .tweets
     @Namespace var animation
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var mode
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,7 +27,6 @@ struct ProfileView: View {
             
             Spacer()
         }
-        .ignoresSafeArea(.all, edges: .bottom)
     }
 }
 
@@ -43,7 +44,7 @@ extension ProfileView {
             
             VStack {
                 Button {
-                    
+                    mode.wrappedValue.dismiss()
                 } label: {
                     Image(systemName: "arrow.left")
                         .resizable()
@@ -75,7 +76,7 @@ extension ProfileView {
                 Text("Edit Profile")
                     .font(.subheadline).bold()
                     .frame(width: 120, height: 33)
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
             }
             .padding(.trailing)
@@ -119,29 +120,22 @@ extension ProfileView {
             HStack(spacing: 24) {
                 HStack(spacing: 4) {
                     Text("807")
-                        .font(.subheadline)
-                        .foregroundColor(.black)
                         .bold()
                     
                     Text("Following")
-                        .font(.caption)
                         .foregroundColor(.gray)
                 }
                                     
                 HStack(spacing: 4) {
                     Text("6.9M")
-                        .font(.subheadline)
-                        .foregroundColor(.black)
                         .bold()
                     
                     Text("Followers")
-                        .font(.caption)
                         .foregroundColor(.gray)
                 }
-                .padding(.vertical)
             }
             .font(.caption)
-            .foregroundColor(.gray)
+            .padding(.vertical)
         }
         .padding(.horizontal)
     }
