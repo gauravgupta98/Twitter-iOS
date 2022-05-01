@@ -117,25 +117,8 @@ extension ProfileView {
             .font(.caption)
             .foregroundColor(.gray)
             
-            HStack(spacing: 24) {
-                HStack(spacing: 4) {
-                    Text("807")
-                        .bold()
-                    
-                    Text("Following")
-                        .foregroundColor(.gray)
-                }
-                                    
-                HStack(spacing: 4) {
-                    Text("6.9M")
-                        .bold()
-                    
-                    Text("Followers")
-                        .foregroundColor(.gray)
-                }
-            }
-            .font(.caption)
-            .padding(.vertical)
+            UserStatsView()
+                .font(.caption)
         }
         .padding(.horizontal)
     }
@@ -147,7 +130,9 @@ extension ProfileView {
                     Text(item.title)
                         .font(.subheadline)
                         .fontWeight(selectionFilter == item ? .semibold : .regular)
-                        .foregroundColor(selectionFilter == item ? .black : .gray)
+                        .foregroundColor(selectionFilter == item ?
+                                         colorScheme == .dark ? .white : .black
+                                         : .gray)
                     
                     if selectionFilter == item {
                         Capsule()
