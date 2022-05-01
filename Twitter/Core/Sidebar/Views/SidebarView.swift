@@ -28,19 +28,22 @@ struct SidebarView: View {
             }
             .padding(.leading)
             
-            ForEach(SidebarViewModel.allCases, id: \.rawValue) {option in
-                HStack(spacing: 15) {
-                    Image(systemName: option.imageName)
-                        .font(.headline)
-                        .foregroundColor(.gray)
-                    
-                    Text(option.title)
-                        .font(.subheadline)
-                    
-                    Spacer()
+            ForEach(SidebarViewModel.allCases, id: \.rawValue) {viewModel in
+                if viewModel == .profile {
+                    NavigationLink {
+                        ProfileView()
+                    } label: {
+                        SidebarOptionRowView(viewModel: viewModel)
+                    }
+                } else if viewModel == .logout {
+                    Button {
+                        
+                    } label: {
+                        SidebarOptionRowView(viewModel: viewModel)
+                    }
+                } else {
+                    SidebarOptionRowView(viewModel: viewModel)
                 }
-                .frame(height: 39)
-                .padding(.horizontal)
             }
             .padding(.vertical, 3)
             

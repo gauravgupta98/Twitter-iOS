@@ -131,7 +131,8 @@ extension ProfileView {
                         .font(.subheadline)
                         .fontWeight(selectionFilter == item ? .semibold : .regular)
                         .foregroundColor(selectionFilter == item ?
-                                         colorScheme == .dark ? .white : .black : .gray)
+                                         colorScheme == .dark ? .white : .black
+                                         : .gray)
                     
                     if selectionFilter == item {
                         Capsule()
