@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80D4AB5281F973D0070BA52 /* NewTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D4AB4281F973D0070BA52 /* NewTweetView.swift */; };
+		B80D4AB7281F97EB0070BA52 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D4AB6281F97EB0070BA52 /* TextArea.swift */; };
 		B8837B8E281B914D007F9A23 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B8D281B914D007F9A23 /* ProfileView.swift */; };
 		B8837B90281B96C7007F9A23 /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B8F281B96C7007F9A23 /* TweetFilterViewModel.swift */; };
 		B8837B95281B9F6F007F9A23 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B94281B9F6F007F9A23 /* UserRowView.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B80D4AB4281F973D0070BA52 /* NewTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetView.swift; sourceTree = "<group>"; };
+		B80D4AB6281F97EB0070BA52 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		B8837B8D281B914D007F9A23 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B8837B8F281B96C7007F9A23 /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
 		B8837B94281B9F6F007F9A23 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B80D4AB1281F97130070BA52 /* CreateTweet */ = {
+			isa = PBXGroup;
+			children = (
+				B80D4AB3281F972C0070BA52 /* Views */,
+				B80D4AB2281F97200070BA52 /* ViewModels */,
+			);
+			path = CreateTweet;
+			sourceTree = "<group>";
+		};
+		B80D4AB2281F97200070BA52 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B80D4AB3281F972C0070BA52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B80D4AB4281F973D0070BA52 /* NewTweetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B8837B8B281B911B007F9A23 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +194,7 @@
 		B8D5DB03281A8D10000B1582 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B80D4AB1281F97130070BA52 /* CreateTweet */,
 				B8837B96281E6B84007F9A23 /* Sidebar */,
 				B8D5DB16281A9C24000B1582 /* Profile */,
 				B8D5DB15281A9C18000B1582 /* Messages */,
@@ -213,6 +242,7 @@
 			children = (
 				B8837B93281B9F5E007F9A23 /* Users */,
 				B8D5DB0D281A8E1A000B1582 /* Tweets */,
+				B80D4AB6281F97EB0070BA52 /* TextArea.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -362,7 +392,9 @@
 				B8D5DB19281A9C43000B1582 /* ExploreView.swift in Sources */,
 				B8837BA0281E6DC5007F9A23 /* UserStatsView.swift in Sources */,
 				B8837B95281B9F6F007F9A23 /* UserRowView.swift in Sources */,
+				B80D4AB7281F97EB0070BA52 /* TextArea.swift in Sources */,
 				B8837B9A281E6BCA007F9A23 /* SidebarView.swift in Sources */,
+				B80D4AB5281F973D0070BA52 /* NewTweetView.swift in Sources */,
 				B8837B90281B96C7007F9A23 /* TweetFilterViewModel.swift in Sources */,
 				B8D5DB12281A9B1F000B1582 /* MainTabView.swift in Sources */,
 				B8D5DB1B281A9C5C000B1582 /* NotificationsView.swift in Sources */,
@@ -496,6 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Twitter/Preview Content\"";
+				DEVELOPMENT_TEAM = CTSVPBWT52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -527,6 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Twitter/Preview Content\"";
+				DEVELOPMENT_TEAM = CTSVPBWT52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
