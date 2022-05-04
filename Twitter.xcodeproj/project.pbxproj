@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8259A5F2822361D005B5353 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8259A5E2822361D005B5353 /* LoginView.swift */; };
+		B8259A6128223628005B5353 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8259A6028223628005B5353 /* RegistrationView.swift */; };
 		B8837B8E281B914D007F9A23 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B8D281B914D007F9A23 /* ProfileView.swift */; };
 		B8837B90281B96C7007F9A23 /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B8F281B96C7007F9A23 /* TweetFilterViewModel.swift */; };
 		B8837B95281B9F6F007F9A23 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B94281B9F6F007F9A23 /* UserRowView.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8259A5E2822361D005B5353 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B8259A6028223628005B5353 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		B8837B8D281B914D007F9A23 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B8837B8F281B96C7007F9A23 /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
 		B8837B94281B9F6F007F9A23 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8259A5B282235C4005B5353 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B8259A5D282235FF005B5353 /* Views */,
+				B8259A5C282235FA005B5353 /* ViewModel */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		B8259A5C282235FA005B5353 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B8259A5D282235FF005B5353 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8259A5E2822361D005B5353 /* LoginView.swift */,
+				B8259A6028223628005B5353 /* RegistrationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B8837B8B281B911B007F9A23 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +195,7 @@
 		B8D5DB03281A8D10000B1582 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B8259A5B282235C4005B5353 /* Authentication */,
 				B8837B96281E6B84007F9A23 /* Sidebar */,
 				B8D5DB16281A9C24000B1582 /* Profile */,
 				B8D5DB15281A9C18000B1582 /* Messages */,
@@ -366,6 +396,8 @@
 				B8837B90281B96C7007F9A23 /* TweetFilterViewModel.swift in Sources */,
 				B8D5DB12281A9B1F000B1582 /* MainTabView.swift in Sources */,
 				B8D5DB1B281A9C5C000B1582 /* NotificationsView.swift in Sources */,
+				B8259A6128223628005B5353 /* RegistrationView.swift in Sources */,
+				B8259A5F2822361D005B5353 /* LoginView.swift in Sources */,
 				B8837B9E281E6BE6007F9A23 /* SidebarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
