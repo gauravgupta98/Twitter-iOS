@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SidebarView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
@@ -37,7 +39,7 @@ struct SidebarView: View {
                     }
                 } else if viewModel == .logout {
                     Button {
-                        
+                        authViewModel.logout()
                     } label: {
                         SidebarOptionRowView(viewModel: viewModel)
                     }
