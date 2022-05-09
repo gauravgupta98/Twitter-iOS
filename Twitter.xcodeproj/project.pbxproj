@@ -39,6 +39,7 @@
 		B8D5DB1D281A9C6D000B1582 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5DB1C281A9C6D000B1582 /* MessagesView.swift */; };
 		B8D72E2E2828C43300F2AB06 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */; };
 		B8D72E312828C9A200F2AB06 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E302828C9A200F2AB06 /* ImagePicker.swift */; };
+		B8D72E332828DFB100F2AB06 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E322828DFB100F2AB06 /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		B8D5DB1C281A9C6D000B1582 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		B8D72E302828C9A200F2AB06 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B8D72E322828DFB100F2AB06 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 		B8D5DB04281A8D1A000B1582 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B8D72E322828DFB100F2AB06 /* ImageUploader.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				B8D72E312828C9A200F2AB06 /* ImagePicker.swift in Sources */,
 				B8837BA2281E745D007F9A23 /* ContentView.swift in Sources */,
 				B8D5DB0F281A8E4D000B1582 /* TweetRowView.swift in Sources */,
+				B8D72E332828DFB100F2AB06 /* ImageUploader.swift in Sources */,
 				B8259A6D2823BB95005B5353 /* CustomInputField.swift in Sources */,
 				B8D5DB0C281A8DAA000B1582 /* FeedView.swift in Sources */,
 				B8837BA4281E79FF007F9A23 /* SidebarOptionRowView.swift in Sources */,
