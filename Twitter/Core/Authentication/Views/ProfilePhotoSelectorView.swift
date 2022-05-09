@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct ProfilePhotoSelectorView: View {
+    @State private var showImagePicker = false
+    @State private var selectedImage: UIImage?
+    @State private var profileImage: Image?
+    
     var body: some View {
         VStack {
-            HeaderView(title: "Create your account.",
+            HeaderView(title: "Setup account.",
                        caption: "Add a profile photo")
             
             Button {
-                
+                showImagePicker.toggle()
             } label: {
-                Button {
-                    
-                } label: {
+                if let profileImage = profileImage {
+                    profileImage
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150, height: 150)
+                        .clipShape(Circle())
+                        .padding()
+                        .padding(.top, 60)
+                } else {
                     VStack {
                         Image(systemName: "plus")
                             .resizable()
@@ -28,16 +38,25 @@ struct ProfilePhotoSelectorView: View {
                             .background(Color(.systemBlue))
                             .foregroundColor(.white)
                             .clipShape(Circle())
-                        
+                            
                         Text("Photo")
                     }
+                    .padding()
+                    .padding(.top, 60)
                 }
-                .padding()
+            }
+            .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+                ImagePicker(selectedImage: $selectedImage)
             }
             
             Spacer()
         }
         .ignoresSafeArea()
+    }
+    
+    func loadImage() {
+        guard let selectedImage = selectedImage else { return }
+        profileImage = Image(uiImage: selectedImage)
     }
 }
 

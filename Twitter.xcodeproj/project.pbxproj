@@ -38,6 +38,7 @@
 		B8D5DB1B281A9C5C000B1582 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5DB1A281A9C5C000B1582 /* NotificationsView.swift */; };
 		B8D5DB1D281A9C6D000B1582 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5DB1C281A9C6D000B1582 /* MessagesView.swift */; };
 		B8D72E2E2828C43300F2AB06 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */; };
+		B8D72E312828C9A200F2AB06 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E302828C9A200F2AB06 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		B8D5DB1A281A9C5C000B1582 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		B8D5DB1C281A9C6D000B1582 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
+		B8D72E302828C9A200F2AB06 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 		B8D5DAF4281A74E4000B1582 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				B8D72E2F2828C98C00F2AB06 /* Utils */,
 				B8D5DB06281A8D1D000B1582 /* Extensions */,
 				B8D5DB05281A8D1C000B1582 /* Model */,
 				B8D5DB04281A8D1A000B1582 /* Service */,
@@ -376,6 +379,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		B8D72E2F2828C98C00F2AB06 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B8D72E302828C9A200F2AB06 /* ImagePicker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -458,6 +469,7 @@
 			files = (
 				B8837B8E281B914D007F9A23 /* ProfileView.swift in Sources */,
 				B8D5DB1D281A9C6D000B1582 /* MessagesView.swift in Sources */,
+				B8D72E312828C9A200F2AB06 /* ImagePicker.swift in Sources */,
 				B8837BA2281E745D007F9A23 /* ContentView.swift in Sources */,
 				B8D5DB0F281A8E4D000B1582 /* TweetRowView.swift in Sources */,
 				B8259A6D2823BB95005B5353 /* CustomInputField.swift in Sources */,
