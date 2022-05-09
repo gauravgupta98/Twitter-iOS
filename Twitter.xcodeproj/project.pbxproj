@@ -37,6 +37,7 @@
 		B8D5DB19281A9C43000B1582 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5DB18281A9C43000B1582 /* ExploreView.swift */; };
 		B8D5DB1B281A9C5C000B1582 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5DB1A281A9C5C000B1582 /* NotificationsView.swift */; };
 		B8D5DB1D281A9C6D000B1582 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5DB1C281A9C6D000B1582 /* MessagesView.swift */; };
+		B8D72E2E2828C43300F2AB06 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		B8D5DB18281A9C43000B1582 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		B8D5DB1A281A9C5C000B1582 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		B8D5DB1C281A9C6D000B1582 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		B8259A6528223B6C005B5353 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */,
 				B8259A6628223B73005B5353 /* LoginView.swift */,
 				B8259A6828223B80005B5353 /* RegistrationView.swift */,
 			);
@@ -461,6 +464,7 @@
 				B8D5DB0C281A8DAA000B1582 /* FeedView.swift in Sources */,
 				B8837BA4281E79FF007F9A23 /* SidebarOptionRowView.swift in Sources */,
 				B8259A702823BDAF005B5353 /* HeaderView.swift in Sources */,
+				B8D72E2E2828C43300F2AB06 /* ProfilePhotoSelectorView.swift in Sources */,
 				B8D5DAF6281A74E4000B1582 /* TwitterApp.swift in Sources */,
 				B8D5DB19281A9C43000B1582 /* ExploreView.swift in Sources */,
 				B8837BA0281E6DC5007F9A23 /* UserStatsView.swift in Sources */,
