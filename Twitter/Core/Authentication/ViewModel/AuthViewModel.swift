@@ -12,10 +12,14 @@ import SwiftUI
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var didAutheticateUser = false
+    @Published var currentUser: User?
+    
     private var tempUserSession: FirebaseAuth.User?
+    private var service = UserService()
     
     init() {
         self.userSession = Auth.auth().currentUser
+        self.fetchUser()
     }
     
     func login(withEmail email: String, password: String) {
@@ -42,8 +46,7 @@ class AuthViewModel: ObservableObject {
             
             let data = ["email": email,
                         "username": username.lowercased(),
-                        "fullname": fullname,
-                        "uid": user.uid]
+                        "fullname": fullname]
             
             Firestore.firestore().collection("users")
                 .document(user.uid)
@@ -67,6 +70,14 @@ class AuthViewModel: ObservableObject {
                 .updateData(["profileImageUrl": profileImageUrl]) { _ in
                     self.userSession = self.tempUserSession
                 }
+        }
+    }
+    
+    func fetchUser() {
+        guard let uid = self.userSession?.uid else { return }
+        
+        service.fetchUser(withUid: uid) { user in
+            self.currentUser = user
         }
     }
 }
