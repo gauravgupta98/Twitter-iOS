@@ -11,45 +11,47 @@ struct SidebarView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
-        VStack(alignment: .leading) {
+        if let user = authViewModel.currentUser {
             VStack(alignment: .leading) {
-                Circle()
-                    .frame(width: 48, height: 48)
+                VStack(alignment: .leading) {
+                    Circle()
+                        .frame(width: 48, height: 48)
+                        
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(user.fullname)
+                            .font(.headline)
+                        
+                        Text("@\(user.username)")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
                     
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Bruce Wayne")
-                        .font(.headline)
-                    
-                    Text("@batman")
-                        .font(.caption)
-                        .foregroundColor(.gray)
+                    UserStatsView()
+                        .font(.subheadline)
                 }
+                .padding(.leading)
                 
-                UserStatsView()
-                    .font(.subheadline)
-            }
-            .padding(.leading)
-            
-            ForEach(SidebarViewModel.allCases, id: \.rawValue) {viewModel in
-                if viewModel == .profile {
-                    NavigationLink {
-                        ProfileView()
-                    } label: {
+                ForEach(SidebarViewModel.allCases, id: \.rawValue) {viewModel in
+                    if viewModel == .profile {
+                        NavigationLink {
+                            ProfileView()
+                        } label: {
+                            SidebarOptionRowView(viewModel: viewModel)
+                        }
+                    } else if viewModel == .logout {
+                        Button {
+                            authViewModel.logout()
+                        } label: {
+                            SidebarOptionRowView(viewModel: viewModel)
+                        }
+                    } else {
                         SidebarOptionRowView(viewModel: viewModel)
                     }
-                } else if viewModel == .logout {
-                    Button {
-                        authViewModel.logout()
-                    } label: {
-                        SidebarOptionRowView(viewModel: viewModel)
-                    }
-                } else {
-                    SidebarOptionRowView(viewModel: viewModel)
                 }
+                .padding(.vertical, 3)
+                
+                Spacer()
             }
-            .padding(.vertical, 3)
-            
-            Spacer()
         }
     }
 }
