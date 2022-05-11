@@ -38,7 +38,7 @@ struct SidebarView: View {
                 ForEach(SidebarViewModel.allCases, id: \.rawValue) {viewModel in
                     if viewModel == .profile {
                         NavigationLink {
-                            ProfileView()
+                            ProfileView(user: user)
                         } label: {
                             SidebarOptionRowView(viewModel: viewModel)
                         }

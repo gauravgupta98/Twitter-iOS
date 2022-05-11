@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileView: View {
     @State private var selectionFilter: TweetFilterViewModel = .tweets
     @Namespace var animation
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var mode
+    
+    private let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,7 +39,11 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(user: User(id: NSUUID().uuidString,
+                               username: "batman",
+                               fullname: "Bruce Wayne",
+                               profileImageUrl: "",
+                               email: "batman@gmail.com"))
     }
 }
 
@@ -50,10 +61,13 @@ extension ProfileView {
                         .resizable()
                         .frame(width: 21, height: 15)
                         .foregroundColor(.white)
-                        .offset(x: 15, y: 12)
+                        .offset(x: 15, y: -15)
                 }
                 
-                Circle()
+                KFImage(URL(string: user.profileImageUrl))
+                    .resizable()
+                    .scaledToFill()
+                    .clipShape(Circle())
                     .frame(width: 72, height: 72)
                     .offset(x: 15, y: 24)
             }
@@ -86,14 +100,14 @@ extension ProfileView {
     var userInfoDetails: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack {
-                Text("Heath Ledger")
+                Text(user.fullname)
                     .font(.title2).bold()
                 
                 Image(systemName: "checkmark.seal.fill")
                     .foregroundColor(Color(.systemBlue))
             }
             
-            Text("@joker")
+            Text("@\(user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
