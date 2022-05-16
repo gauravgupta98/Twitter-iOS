@@ -31,7 +31,7 @@ struct UserService {
                     guard let user = try? document.data(as: User.self) else { return }
                     users.append(user)
                 }
-                
+                                                
                 completion(users)
             }
     }
