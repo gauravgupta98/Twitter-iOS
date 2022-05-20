@@ -21,6 +21,7 @@
 		B8276F692824D2AB008B66C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B8276F682824D2AB008B66C7 /* FirebaseStorage */; };
 		B8276F6B2824D563008B66C7 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8276F6A2824D562008B66C7 /* AuthViewModel.swift */; };
 		B845A25A2832007D00D15E22 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B845A2592832007D00D15E22 /* ExploreViewModel.swift */; };
+		B869E9A62837441700CF13DB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869E9A52837441700CF13DB /* SearchBar.swift */; };
 		B8837B8E281B914D007F9A23 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B8D281B914D007F9A23 /* ProfileView.swift */; };
 		B8837B90281B96C7007F9A23 /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B8F281B96C7007F9A23 /* TweetFilterViewModel.swift */; };
 		B8837B95281B9F6F007F9A23 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8837B94281B9F6F007F9A23 /* UserRowView.swift */; };
@@ -57,6 +58,7 @@
 		B8276F5F2824D165008B66C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8276F6A2824D562008B66C7 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B845A2592832007D00D15E22 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		B869E9A52837441700CF13DB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B8837B8D281B914D007F9A23 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B8837B8F281B96C7007F9A23 /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
 		B8837B94281B9F6F007F9A23 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				B80D4AB6281F97EB0070BA52 /* TextArea.swift */,
 				B8259A6A28223BA8005B5353 /* RoundedShape.swift */,
 				B8259A6C2823BB95005B5353 /* CustomInputField.swift */,
+				B869E9A52837441700CF13DB /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				B8D5DB19281A9C43000B1582 /* ExploreView.swift in Sources */,
 				B8837BA0281E6DC5007F9A23 /* UserStatsView.swift in Sources */,
 				B8837B95281B9F6F007F9A23 /* UserRowView.swift in Sources */,
+				B869E9A62837441700CF13DB /* SearchBar.swift in Sources */,
 				B80D4AB7281F97EB0070BA52 /* TextArea.swift in Sources */,
 				B8837B9A281E6BCA007F9A23 /* SidebarView.swift in Sources */,
 				B8259A6728223B73005B5353 /* LoginView.swift in Sources */,
