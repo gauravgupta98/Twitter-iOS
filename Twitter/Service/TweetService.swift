@@ -27,4 +27,11 @@ struct TweetService {
                 }
             }
     }
+    
+    func fetchTweets() {
+        Firestore.firestore().collection("tweets").getDocuments { snapshot, _ in
+            guard let documents = snapshot?.documents else { return }
+            return documents
+        }
+    }
 }
