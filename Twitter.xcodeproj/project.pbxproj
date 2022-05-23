@@ -45,6 +45,8 @@
 		B8D72E2E2828C43300F2AB06 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */; };
 		B8D72E312828C9A200F2AB06 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E302828C9A200F2AB06 /* ImagePicker.swift */; };
 		B8D72E332828DFB100F2AB06 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D72E322828DFB100F2AB06 /* ImageUploader.swift */; };
+		B8F74FC1283B373F0047899F /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F74FC0283B373F0047899F /* TweetService.swift */; };
+		B8F74FC3283B38770047899F /* NewTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F74FC2283B38770047899F /* NewTweetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		B8D72E2D2828C43300F2AB06 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		B8D72E302828C9A200F2AB06 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B8D72E322828DFB100F2AB06 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		B8F74FC0283B373F0047899F /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
+		B8F74FC2283B38770047899F /* NewTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		B80D4AB2281F97200070BA52 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B8F74FC2283B38770047899F /* NewTweetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			children = (
 				B8D72E322828DFB100F2AB06 /* ImageUploader.swift */,
 				B8B0A394282B693000D92A23 /* UserService.swift */,
+				B8F74FC0283B373F0047899F /* TweetService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -501,7 +507,9 @@
 				B845A25A2832007D00D15E22 /* ExploreViewModel.swift in Sources */,
 				B8D5DAF6281A74E4000B1582 /* TwitterApp.swift in Sources */,
 				B8D5DB19281A9C43000B1582 /* ExploreView.swift in Sources */,
+				B8F74FC1283B373F0047899F /* TweetService.swift in Sources */,
 				B8837BA0281E6DC5007F9A23 /* UserStatsView.swift in Sources */,
+				B8F74FC3283B38770047899F /* NewTweetViewModel.swift in Sources */,
 				B8837B95281B9F6F007F9A23 /* UserRowView.swift in Sources */,
 				B869E9A62837441700CF13DB /* SearchBar.swift in Sources */,
 				B80D4AB7281F97EB0070BA52 /* TextArea.swift in Sources */,
