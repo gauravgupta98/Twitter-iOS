@@ -48,6 +48,7 @@
 		B8F74FC1283B373F0047899F /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F74FC0283B373F0047899F /* TweetService.swift */; };
 		B8F74FC3283B38770047899F /* NewTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F74FC2283B38770047899F /* NewTweetViewModel.swift */; };
 		B8F74FC5283B3C570047899F /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F74FC4283B3C570047899F /* FeedViewModel.swift */; };
+		B8F74FC7283B3D0C0047899F /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F74FC6283B3D0C0047899F /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		B8F74FC0283B373F0047899F /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		B8F74FC2283B38770047899F /* NewTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetViewModel.swift; sourceTree = "<group>"; };
 		B8F74FC4283B3C570047899F /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		B8F74FC6283B3D0C0047899F /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				B8B0A396282B6A6700D92A23 /* User.swift */,
+				B8F74FC6283B3D0C0047899F /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				B8B0A395282B693100D92A23 /* UserService.swift in Sources */,
 				B8D72E312828C9A200F2AB06 /* ImagePicker.swift in Sources */,
 				B8837BA2281E745D007F9A23 /* ContentView.swift in Sources */,
+				B8F74FC7283B3D0C0047899F /* Tweet.swift in Sources */,
 				B8F74FC5283B3C570047899F /* FeedViewModel.swift in Sources */,
 				B8D5DB0F281A8E4D000B1582 /* TweetRowView.swift in Sources */,
 				B8D72E332828DFB100F2AB06 /* ImageUploader.swift in Sources */,

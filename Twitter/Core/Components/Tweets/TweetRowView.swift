@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct TweetRowView: View {
+    let tweet: Tweet
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
@@ -34,7 +37,7 @@ struct TweetRowView: View {
                         }
                         
                         // tweet caption
-                        Text("I believe in Harvey Dent")
+                        Text(tweet.caption)
                             .font(.subheadline)
                             .multilineTextAlignment(.leading)
                     }
@@ -88,6 +91,6 @@ struct TweetRowView: View {
 
 struct TweetRowView_Previews: PreviewProvider {
     static var previews: some View {
-        TweetRowView()
+        TweetRowView(tweet: Tweet(caption: "", timestamp: Timestamp(date: Date()), uid: "test", likes: 0))
     }
 }
