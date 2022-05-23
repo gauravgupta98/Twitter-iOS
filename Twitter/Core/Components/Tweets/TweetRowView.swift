@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import Kingfisher
 
 struct TweetRowView: View {
     let tweet: Tweet
@@ -16,24 +17,30 @@ struct TweetRowView: View {
             VStack(alignment: .leading) {
                 // profile image + user info + tweet
                 HStack(alignment: .top, spacing: 12) {
-                    Circle()
-                        .frame(width: 51, height: 51)
-                        .foregroundColor(Color(.systemBlue))
+                    if let user = tweet.user {
+                        KFImage(URL(string: user.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .clipShape(Circle())
+                            .frame(width: 51, height: 51)
+                    }
                     
                     // user info and tweet caption
                     VStack(alignment: .leading, spacing: 4) {
                         // user info
-                        HStack {
-                            Text("Bruce Wayne")
-                                .font(.subheadline).bold()
-                            
-                            Text("@batman")
-                                .foregroundColor(.gray)
-                                .font(.caption)
-                            
-                            Text("2w")
-                                .foregroundColor(.gray)
-                                .font(.caption)
+                        if let user = tweet.user {
+                            HStack {
+                                Text(user.fullname)
+                                    .font(.subheadline).bold()
+                                
+                                Text("@\(user.username)")
+                                    .foregroundColor(.gray)
+                                    .font(.caption)
+                                
+                                Text("2w")
+                                    .foregroundColor(.gray)
+                                    .font(.caption)
+                            }
                         }
                         
                         // tweet caption
