@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 struct TweetService {
-    func uploadTweet(caption: String) {
+    func uploadTweet(caption: String, completion: @escaping(Bool) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let data = ["uid": uid,
@@ -18,8 +18,13 @@ struct TweetService {
                     "timestamp": Timestamp(date: Date())] as [String: Any]
         
         Firestore.firestore().collection("tweets")
-            .document().setData(data) { _ in
-                
+            .document().setData(data) { error in
+                if let error = error {
+                    print("DEBUG: Failed to upload tweet with error: \(error.localizedDescription)")
+                    completion(false)
+                } else {
+                    completion(true)
+                }
             }
     }
 }
