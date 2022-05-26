@@ -11,7 +11,7 @@ class ProfileViewModel: ObservableObject {
     @Published var tweets = [Tweet]()
     
     private let service = TweetService()
-    private let user: User
+    let user: User
     
     init(user: User) {
         self.user = user
@@ -23,6 +23,10 @@ class ProfileViewModel: ObservableObject {
         
         service.fetchTweets(forUid: uid) { tweets in
             self.tweets = tweets
+            
+            for i in 0 ..< tweets.count {
+                self.tweets[i].user = self.user
+            }
         }
     }
 }
