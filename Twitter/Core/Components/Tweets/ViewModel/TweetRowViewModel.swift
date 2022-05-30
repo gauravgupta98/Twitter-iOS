@@ -8,7 +8,7 @@
 import Foundation
 
 class TweetRowViewModel: ObservableObject {
-    let tweet: Tweet
+    @Published var tweet: Tweet
     private let service = TweetService()
 
     init(tweet: Tweet) {
@@ -16,6 +16,8 @@ class TweetRowViewModel: ObservableObject {
     }
     
     func likeTweet() {
-        service.likeTweet()
+        service.likeTweet(tweet) { _ in
+            self.tweet.didLike = true
+        }
     }
 }
