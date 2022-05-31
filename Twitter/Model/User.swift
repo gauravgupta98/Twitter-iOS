@@ -5,6 +5,7 @@
 //  Created by Gaurav Gupta on 11/05/22.
 //
 
+import Firebase
 import FirebaseFirestoreSwift
 
 struct User: Identifiable, Decodable {
@@ -13,4 +14,6 @@ struct User: Identifiable, Decodable {
     let fullname: String
     let profileImageUrl: String
     let email: String
+    
+    var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == id }
 }
